@@ -1,0 +1,877 @@
+@import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&display=swap');
+
+:root {
+    --cor-fundo: #6C8C94;
+    --cor-primaria: #F2F2EF;
+    --cor-secundaria: #D6D6CC;
+    --cor-botao: #A7A7A1;
+    --cor-sombra: #5D7582;
+
+    --fonte-primaria: 'Kameron', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-fundo);
+    color: var(--cor-primaria);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Menu de navegação */
+
+#cabecalho {
+    padding: 1% 0% 0.5% 7%;
+    animation: fade-down 0.5s;
+}
+
+.cabecalho__menu {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-flex;
+    color: var(--cor-primaria);
+    filter: drop-shadow(var(--cor-sombra) 0px 3px 1px);
+}
+
+.cabecalho__menu__link:hover {
+    border-bottom: 1px solid var(--cor-secundaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho__menu__link__atual {
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-flex;
+    color: var(--cor-secundaria);
+    filter: drop-shadow(var(--cor-sombra) 0px 3px 1px);
+}
+
+.cabecalho__menu__link__atual:hover {
+    border-bottom: 1px solid var(--cor-secundaria);
+}
+
+.linha {
+    margin: 0% 3% 0% 3%;
+    border-bottom: 1px solid #D6D6CC;
+    animation: fade-down 1s;
+    filter: drop-shadow(var(--cor-sombra) 0px 4px 1px);
+}
+
+.logo {
+    display: flex;
+    font-size: 48px;
+    font-weight: 700;
+    filter: drop-shadow(var(--cor-sombra) 0px 5px 1px);
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Página HOME */
+
+.legenda {
+    position: absolute;
+    left: 9%;
+    bottom: 30%;
+}
+
+.legenda h1 {
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    font-size: 40px;
+    filter: drop-shadow(var(--cor-sombra) 0px 5px 1px);
+}
+
+.legenda p {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-secundaria);
+    font-weight: 500;
+    font-size: 24px;
+    filter: drop-shadow(var(--cor-sombra) 0px 3px 1px);
+}
+
+.legenda button {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-primaria);
+    font-weight: 700;
+    font-size: 24px;
+    border: none;
+    background: var(--cor-botao);
+    padding: 10px;
+    padding-bottom: 10px;
+    padding-inline: 36px;
+    border-radius: 12px;
+    cursor: pointer;
+    filter: drop-shadow(var(--cor-sombra) 0px 5px 7px);
+}
+
+.legenda button:hover {
+    background: var(--cor-secundaria);
+}
+
+.botao {
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+    display: inline-flex;
+    color: var(--cor-primaria);
+}
+
+.botaoPets {
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+    display: inline-flex;
+    color: var(--cor-primaria);
+}
+
+.botaoContato {
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+    display: inline-flex;
+    color: var(--cor-primaria);
+}
+
+.botaoAdote {
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+    display: inline-flex;
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+#imgSlide {
+    width: 50%;
+    padding-left: 40%;
+    animation: fade 5s;
+    animation-iteration-count: infinite;
+    filter: drop-shadow(var(--cor-sombra) 0px 10px 1px);
+}
+
+#home {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: fade-up 1s;
+}
+
+#pets {
+    display: block;
+    margin-top: 80px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: fade-up 1s;
+}
+
+#banho {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20vh;
+}
+
+#imgBanho {
+    width: 30%;
+    margin-left: 7%;
+    padding-top: 30px;
+    padding-inline: 30px;
+    background-color: var(--cor-sombra);
+    border: 1px solid var(--cor-primaria);
+    filter: drop-shadow(var(--cor-sombra) 10px 10px 7px);
+}
+
+.veterinario {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20vh;
+}
+
+#contato {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20vh;
+}
+
+#imgVeterinario {
+    width: 35%;
+    margin-left: 7%;
+    margin-right: 9%;
+    padding-inline: 30px;
+    background-color: var(--cor-sombra);
+    border: 1px solid var(--cor-primaria);
+    filter: drop-shadow(var(--cor-sombra) 10px 10px 7px);
+}
+
+#produto {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20vh;
+}
+
+#imgProduto {
+    width: 30%;
+    margin-left: 7%;
+    padding-top: 30px;
+    padding-inline-start: 50px;
+    padding-inline-end: 10px;
+    background-color: var(--cor-sombra);
+    border: 1px solid var(--cor-primaria);
+    filter: drop-shadow(var(--cor-sombra) 10px 10px 7px);
+}
+
+#imgAdote {
+    width: 35%;
+    margin-left: 7%;
+    margin-right: 9%;
+    background-color: var(--cor-sombra);
+    border: 1px solid var(--cor-primaria);
+    filter: drop-shadow(var(--cor-sombra) 10px 10px 7px);
+}
+
+#imgMissao {
+    width: 35%;
+    height: 25%;
+    margin-left: 7%;
+    background-color: var(--cor-sombra);
+    border: 1px solid var(--cor-primaria);
+    filter: drop-shadow(var(--cor-sombra) 10px 10px 7px);
+}
+
+#adote {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20vh;
+}
+
+#sobre {
+    display: block;
+    margin-top: 80px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: fade-up 1s;
+}
+
+#contato {
+    display: block;
+    margin-top: 80px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: fade-up 1s;
+}
+
+/* Página PETS */
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    font-size: 50px;
+    filter: drop-shadow(var(--cor-sombra) 0px 5px 1px);
+}
+
+.legendaBanho {
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.legendaBanho h1 {
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    font-size: 32px;
+    filter: drop-shadow(var(--cor-sombra) 0px 5px 1px);
+}
+
+.legendaBanho p {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-secundaria);
+    font-weight: 500;
+    font-size: 20px;
+    margin-right: 15%;
+    filter: drop-shadow(var(--cor-sombra) 0px 3px 1px);
+}
+
+.legendaBanho button {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-primaria);
+    font-size: 24px;
+    border: none;
+    background: var(--cor-botao);
+    padding: 10px;
+    padding-bottom: 10px;
+    padding-inline: 36px;
+    border-radius: 12px;
+    cursor: pointer;
+    filter: drop-shadow(var(--cor-sombra) 0px 5px 7px);
+}
+
+.legendaBanho button:hover {
+    background: var(--cor-secundaria);
+}
+
+.legendaVeterinario {
+    margin-left: 9%;
+    margin-top: 5%;
+}
+
+.legendaVeterinario h1 {
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    font-size: 32px;
+    filter: drop-shadow(var(--cor-sombra) 0px 5px 1px);
+}
+
+.legendaVeterinario p {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-secundaria);
+    font-weight: 500;
+    font-size: 20px;
+    padding-right: 0;
+    filter: drop-shadow(var(--cor-sombra) 0px 3px 1px);
+}
+
+.legendaVeterinario button {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-primaria);
+    font-weight: 700;
+    font-size: 24px;
+    border: none;
+    background: var(--cor-botao);
+    padding: 10px;
+    padding-bottom: 10px;
+    padding-inline: 36px;
+    border-radius: 12px;
+    cursor: pointer;
+    filter: drop-shadow(var(--cor-sombra) 0px 5px 7px);
+}
+
+.legendaVeterinario button:hover {
+    background: var(--cor-secundaria);
+}
+
+.legendaProduto {
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.legendaProduto h1 {
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    font-size: 32px;
+    filter: drop-shadow(var(--cor-sombra) 0px 5px 1px);
+}
+
+.legendaProduto p {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-secundaria);
+    font-weight: 500;
+    font-size: 20px;
+    margin-right: 15%;
+    filter: drop-shadow(var(--cor-sombra) 0px 3px 1px);
+}
+
+.legendaProduto button {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-primaria);
+    font-size: 24px;
+    border: none;
+    background: var(--cor-botao);
+    padding: 10px;
+    padding-bottom: 10px;
+    padding-inline: 36px;
+    border-radius: 12px;
+    cursor: pointer;
+    filter: drop-shadow(var(--cor-sombra) 0px 5px 7px);
+}
+
+.legendaProduto button:hover {
+    background: var(--cor-secundaria);
+}
+
+.legendaAdote {
+    margin-left: 9%;
+    margin-top: 2%;
+}
+
+.legendaAdote h1 {
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    font-size: 32px;
+    filter: drop-shadow(var(--cor-sombra) 0px 5px 1px);
+}
+
+.legendaAdote p {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-secundaria);
+    font-weight: 500;
+    font-size: 20px;
+    padding-right: 0;
+    filter: drop-shadow(var(--cor-sombra) 0px 3px 1px);
+}
+
+.legendaAdote button {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-primaria);
+    font-weight: 700;
+    font-size: 24px;
+    border: none;
+    background: var(--cor-botao);
+    padding: 10px;
+    padding-bottom: 10px;
+    padding-inline: 36px;
+    border-radius: 12px;
+    cursor: pointer;
+    filter: drop-shadow(var(--cor-sombra) 0px 5px 7px);
+}
+
+.legendaAdote button:hover {
+    background: var(--cor-secundaria);
+}
+
+@keyframes fade-down {
+    0% {
+        opacity: 0;
+        transform: translate(-30px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translate(30px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+@keyframes fade {
+    0%, 80%, 100% {
+        opacity: 0;
+        transform: translate(30px) scale(0.9);
+    }
+
+    10%, 60% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+/* Página Produtos */
+#produtos {
+    margin-top: 7%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: fade-up 1s;
+}
+
+.itens {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20%;
+}
+
+.legendaItens {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 5%;
+}
+
+.legendaItens h1 {
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    font-size: 32px;
+    filter: drop-shadow(var(--cor-sombra) 0px 5px 1px);
+}
+
+.legendaItens p {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-secundaria);
+    font-weight: 500;
+    font-size: 16px;
+    filter: drop-shadow(var(--cor-sombra) 0px 3px 1px);
+    padding-top: 1%;
+}
+
+.legendaItens p:hover {
+    cursor: pointer;
+    border-bottom: 1px solid var(--cor-secundaria);
+}
+
+.legendaContato {
+    align-items: center;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.legendaContato h1 {
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    font-size: 32px;
+    filter: drop-shadow(var(--cor-sombra) 0px 5px 1px);
+}
+
+.legendaContato button {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-primaria);
+    font-weight: 700;
+    font-size: 24px;
+    border: none;
+    background: var(--cor-botao);
+    padding: 10px;
+    padding-bottom: 10px;
+    padding-inline: 36px;
+    border-radius: 12px;
+    cursor: pointer;
+    filter: drop-shadow(var(--cor-sombra) 0px 5px 7px);
+}
+
+.legendaContato button:hover {
+    background: var(--cor-secundaria);
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    width: 250px;
+    height: 300px;
+    background-color: var(--cor-primaria);
+    margin-top: 40px;
+    border-radius: 25px;
+    text-align: center;
+    filter: drop-shadow(var(--cor-sombra) 10px 10px 2px);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transition: 0.5s;
+}
+
+.card:hover {
+    filter: drop-shadow(var(--cor-sombra) 20px 20px 5px);
+    height: 350px;
+}
+
+.card .imgbox {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    top: 20px;
+    transition: 0.5s;
+}
+
+.card:hover .imgbox {
+    top: -100px;
+    scale: 0.75;
+}
+
+.card .imgbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: drop-shadow(var(--cor-sombra) 0px 1px 3px);
+}
+
+.card .content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    color: var(--cor-botao);
+    font-family: var(--fonte-primaria);
+    font-weight: 500;
+    font-size: 16px;
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    padding: 0px 30px;
+    text-align: center;
+    height: 30px;
+    overflow: hidden;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.content p {
+    margin-inline: 20px;
+}
+
+.card:hover .content {
+    top: 130px;
+    height: 250px;
+    visibility: visible;
+}
+
+.content button {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-primaria);
+    font-size: 20px;
+    border: none;
+    background: var(--cor-botao);
+    margin-top: 15%;
+    margin-inline: 15%;
+    padding-block: 5px;
+    padding-inline: 0;
+    border-radius: 12px;
+    cursor: pointer;
+    filter: drop-shadow(var(--cor-sombra) 0px 1px 3px);
+}
+
+.card button:hover {
+    filter: drop-shadow(var(--cor-sombra) 0px 1px 5px);
+}
+
+/* Rodapé */
+
+.rodape {
+    height: 20px;
+    text-align: center;
+    animation: fade-up 1s;
+}
+
+.rodape h5 {
+    font-family: var(--fonte-primaria);
+    background: var(--cor-botao);
+    font-size: 16px;
+    padding: 20px;
+}
+
+.media {
+    width: 30px;
+    display: flex;
+    align-items: center;
+}
+
+label[for = "bt-menu"] {
+    padding: 5px;
+    background: var(--cor-fundo);
+    color: var(--cor-primaria);
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+#bt-menu {
+    display: none;
+}
+
+label[for = "bt-menu"] {
+    display: none;
+}
+
+@media (max-width:500px) {
+    .cabecalho__menu {
+        flex-direction: column;
+        gap: 12px;
+        height: 0px;
+        margin-top: 0%;
+        margin-left: -200%;
+        margin-right: 10%;
+        transition: all 0.5s;
+    }
+
+    #bt-menu {
+        display: none;
+    }
+
+    label[for = "bt-menu"] {
+        display: block;
+    }
+
+    #bt-menu:checked ~ .cabecalho__menu {
+        margin-left: 0;
+        height: 250px;
+    }
+    
+    #home {
+        margin-top: 300px;
+    }
+
+    #imgSlide {
+        margin-bottom: 20vh;
+    }
+
+    .legenda {
+        bottom: 100%;
+    }
+
+    #banho {
+        flex-direction: column;
+        margin-left: 25%;
+        text-align: center;
+    }
+
+    #imgBanho {
+        width: 50%;
+        margin-left: 0%;
+    }
+
+    .legendaBanho {
+        margin-left: 0%;
+        margin-top: 3%;
+    }
+    
+    .legendaBanho h1 {
+        margin-right: 35%;   
+    }
+    
+    .legendaBanho p {
+        margin-right: 35%;
+    }
+    
+    .legendaBanho button {
+        margin-right: 35%;
+    }
+
+    .veterinario {
+        flex-direction: column;
+        margin-left: 20%;
+        text-align: center;
+    }
+
+    .legendaVeterinario button {
+        margin-bottom: 5%;
+        margin-right: 25%;
+    }
+
+    .legendaVeterinario {
+        margin-left: 0;
+        margin-top: 3%;
+    }
+    
+    .legendaVeterinario h1 {
+        margin-right: 25%;   
+    }
+    
+    .legendaVeterinario p {
+        margin-right: 25%;
+    }
+
+    #imgVeterinario {
+        width: 60%;
+        margin-left: 0%;
+    }
+
+    #produto {
+        flex-direction: column;
+        margin-left: 20%;
+        text-align: center;
+    }
+
+    #imgProduto {
+        width: 60%;
+        margin-left: 0%;
+    }
+
+    .legendaProduto {
+        margin-left: 0;
+        margin-top: 3%;
+    }
+    
+    .legendaProduto h1 {
+        margin-right: 25%;   
+    }
+    
+    .legendaProduto p {
+        margin-right: 25%;
+    }
+
+    .legendaProduto button {
+        margin-right: 25%;
+    }
+
+    #adote {
+        flex-direction: column;
+        margin-left: 20%;
+        text-align: center;
+    }
+
+    #imgAdote {
+        width: 75%;
+        margin-left: 0%;
+    }
+
+    .legendaAdote {
+        margin-left: 0;
+        margin-top: 3%;
+    }
+    
+    .legendaAdote h1 {
+        margin-right: 25%;   
+    }
+    
+    .legendaAdote p {
+        margin-right: 25%;
+    }
+
+    .legendaAdote button {
+        margin-right: 25%;
+        margin-bottom: 5%;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        margin-bottom: 5vh;
+    }
+
+    #imgMissao {
+        width: 75%;
+        margin-left: 0%;
+    }
+}
